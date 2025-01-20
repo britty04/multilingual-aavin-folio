@@ -80,15 +80,35 @@ export const translations = {
       items: [
         {
           question: "What are your delivery timings?",
-          answer: "We deliver fresh milk between 5 AM and 7 AM daily. Other products are delivered between 7 AM and 7 PM."
+          answer: "We deliver fresh milk between 5 AM and 7 AM daily. Other products are delivered between 7 AM and 7 PM based on your location and order preferences."
         },
         {
           question: "How do I place a bulk order?",
-          answer: "For bulk orders, please contact our customer service at 1800-XXX-XXXX or email us at bulk@aavin.com"
+          answer: "For bulk orders, please contact our customer service at 1800-XXX-XXXX or email us at bulk@aavin.com. We offer special pricing and dedicated support for bulk orders."
         },
         {
           question: "Are your products organic?",
-          answer: "Yes, we source our milk from certified organic dairy farms and follow strict quality control measures."
+          answer: "Yes, we source our milk from certified organic dairy farms. Our farmers follow strict quality control measures and sustainable farming practices."
+        },
+        {
+          question: "What is your return policy?",
+          answer: "If you're not satisfied with our products, please contact us within 24 hours of delivery. We'll arrange for a replacement or refund based on the situation."
+        },
+        {
+          question: "Do you offer subscription plans?",
+          answer: "Yes, we offer daily, weekly, and monthly subscription plans for all our products. Subscribers enjoy special discounts and priority delivery."
+        },
+        {
+          question: "How do you ensure product quality?",
+          answer: "We follow strict quality control measures at every stage - from sourcing to processing and delivery. Our facilities are ISO certified and regularly audited."
+        },
+        {
+          question: "What payment methods do you accept?",
+          answer: "We accept all major credit/debit cards, UPI payments, net banking, and cash on delivery. Monthly subscriptions can be paid through auto-debit."
+        },
+        {
+          question: "How can I track my order?",
+          answer: "Once your order is confirmed, you'll receive a tracking link via SMS and email. You can also track your order through our mobile app."
         }
       ]
     },
@@ -254,6 +274,26 @@ export const translations = {
         {
           question: "உங்கள் தயாரிப்புகள் இயற்கை முறையிலானவையா?",
           answer: "ஆம், நாங்கள் சான்றளிக்கப்பட்ட இயற்கை பால் பண்ணைகளில் இருந்து பாலைப் பெறுகிறோம் மற்றும் கடுமையான தர கட்டுப்பாட்டு நடவடிக்கைகளைப் பின்பற்றுகிறோம்."
+        },
+        {
+          question: "உங்கள் திருப்பி கொள்கை என்ன?",
+          answer: "நாங்கள் வழங்கிய தயாரிப்புகளில் நீங்கள் திருப்தி அடையவில்லை என்றால், தயவுசெய்து விநியோகத்திற்குப் பிறகு 24 மணி நேரத்திற்குள் எங்களை தொடர்பு கொள்ளவும். நிலைமையின் அடிப்படையில் மாற்றம் அல்லது பணத்தை திருப்பி வழங்குவோம்."
+        },
+        {
+          question: "நீங்கள் சந்தா திட்டங்களை வழங்குகிறீர்களா?",
+          answer: "ஆம், எங்கள் அனைத்து தயாரிப்புகளுக்கும் தினசரி, வாராந்திர மற்றும் மாதாந்திர சந்தா திட்டங்களை வழங்குகிறோம். சந்தா எடுக்கும் வாடிக்கையாளர்கள் சிறப்பு தள்ளுபடிகள் மற்றும் முன்னுரிமை விநியோகத்தை அனுபவிக்கிறார்கள்."
+        },
+        {
+          question: "நீங்கள் தயாரிப்பு தரத்தை எவ்வாறு உறுதி செய்கிறீர்கள்?",
+          answer: "நாங்கள் மூலப்பொருள் பெறுதல் முதல் செயலாக்கம் மற்றும் விநியோகிக்கும் வரை ஒவ்வொரு கட்டத்திலும் கடுமையான தர கட்டுப்பாட்டு நடவடிக்கைகளை பின்பற்றுகிறோம். எங்கள் வசதிகள் ISO சான்றிதழ் பெற்றவை மற்றும் அடிக்கடி ஆய்வு செய்யப்படுகின்றன."
+        },
+        {
+          question: "நீங்கள் ஏதேனும் கட்டண முறைகளை ஏற்கிறீர்களா?",
+          answer: "நாங்கள் அனைத்து முக்கிய கிரெடிட்/டெபிட் கார்டுகள், UPI கட்டணங்கள், நெட் வங்கி மற்றும் பணம் வழங்கல் ஆகியவற்றை ஏற்கிறோம். மாதாந்திர சந்தாக்களை தானாகக் கட்டணம் செலுத்தலாம்."
+        },
+        {
+          question: "என் ஆர்டரை எவ்வாறு கண்காணிக்கலாம்?",
+          answer: "உங்கள் ஆர்டர் உறுதியாகிய பிறகு, நீங்கள் SMS மற்றும் மின்னஞ்சல் மூலம் கண்காணிப்பு இணைப்பு பெறுவீர்கள். எங்கள் மொபைல் செயலியில் உங்கள் ஆர்டரை கண்காணிக்கவும் முடியும்."
         }
       ]
     },
