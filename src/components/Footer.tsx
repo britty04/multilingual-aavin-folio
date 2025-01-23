@@ -65,18 +65,18 @@ export function Footer() {
   const content = footerLinks[language];
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-8">
+    <footer className="bg-gray-900 text-white pt-8 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {content.sections.map((section, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-sm font-semibold mb-3">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link
                       to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors"
+                      className="text-gray-300 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -87,25 +87,25 @@ export function Footer() {
           ))}
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">{content.contact.title}</h3>
-            <div className="space-y-4">
-              <p className="flex items-center text-gray-300">
-                <MapPin className="h-5 w-5 mr-2" />
+            <h3 className="text-sm font-semibold mb-3">{content.contact.title}</h3>
+            <div className="space-y-3">
+              <p className="flex items-center text-gray-300 text-sm">
+                <MapPin className="h-4 w-4 mr-2" />
                 {content.contact.address}
               </p>
-              <p className="flex items-center text-gray-300">
-                <Phone className="h-5 w-5 mr-2" />
+              <p className="flex items-center text-gray-300 text-sm">
+                <Phone className="h-4 w-4 mr-2" />
                 {content.contact.phone}
               </p>
-              <p className="flex items-center text-gray-300">
-                <Mail className="h-5 w-5 mr-2" />
+              <p className="flex items-center text-gray-300 text-sm">
+                <Mail className="h-4 w-4 mr-2" />
                 {content.contact.email}
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-sm font-semibold mb-3">
               {language === "en" ? "Follow Us" : "எங்களை பின்தொடரவும்"}
             </h3>
             <div className="flex space-x-4">
@@ -113,25 +113,25 @@ export function Footer() {
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors"
               >
-                <Facebook className="h-6 w-6" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors"
               >
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
           <p>
             © {new Date().getFullYear()}{" "}
             {language === "en"
