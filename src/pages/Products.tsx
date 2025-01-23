@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import NutritionFacts from "@/components/NutritionFacts";
 import ProductPricing from "@/components/ProductPricing";
 import { motion } from "framer-motion";
+import { Milk } from "lucide-react";
 
 const Products = () => {
   const { language } = useLanguage();
@@ -25,43 +26,43 @@ const Products = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4 text-primary">{t.title}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t.description}</p>
+          <h1 className="text-5xl font-bold mb-6 text-black">{t.title}</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.description}</p>
         </motion.div>
 
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
         >
           {t.items.map((product, index) => (
             <motion.div key={index} variants={item}>
-              <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden bg-white/80 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+              <Card className="group hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white border-2 border-black/10">
+                <CardHeader className="space-y-4">
+                  <CardTitle className="text-2xl group-hover:text-black transition-colors">
                     {product.name}
                   </CardTitle>
-                  <CardDescription className="text-lg font-semibold text-primary">
+                  <CardDescription className="text-xl font-bold text-black">
                     {product.price}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="aspect-video w-full mb-6 bg-muted rounded-lg overflow-hidden">
+                <CardContent className="space-y-8">
+                  <div className="aspect-square w-full bg-gray-50 rounded-lg overflow-hidden">
                     <img
                       src={`/placeholder.svg`}
                       alt={product.name}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <p className="text-muted-foreground mb-6">{product.description}</p>
+                  <p className="text-gray-600 text-lg">{product.description}</p>
                   
                   <NutritionFacts
                     facts={{
@@ -88,7 +89,7 @@ const Products = () => {
         </motion.div>
       </div>
       
-      {/* Floating dairy elements */}
+      {/* Floating Elements */}
       <motion.div
         animate={{
           y: [0, -20, 0],
@@ -99,9 +100,9 @@ const Products = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="fixed top-20 right-10 w-16 h-16 opacity-20 pointer-events-none"
+        className="fixed top-20 right-10 text-black/10"
       >
-        <img src="/placeholder.svg" alt="floating-milk" className="w-full h-full object-contain" />
+        <Milk size={64} />
       </motion.div>
       
       <motion.div
@@ -115,9 +116,9 @@ const Products = () => {
           ease: "easeInOut",
           delay: 1
         }}
-        className="fixed bottom-20 left-10 w-20 h-20 opacity-20 pointer-events-none"
+        className="fixed bottom-20 left-10 text-black/10"
       >
-        <img src="/placeholder.svg" alt="floating-dairy" className="w-full h-full object-contain" />
+        <Milk size={80} />
       </motion.div>
     </div>
   );

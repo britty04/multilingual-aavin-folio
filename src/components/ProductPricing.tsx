@@ -11,16 +11,16 @@ interface ProductPricingProps {
 
 const ProductPricing = ({ options }: ProductPricingProps) => {
   return (
-    <div className="mt-4">
-      <h3 className="text-lg font-semibold mb-3 text-primary">Available Quantities</h3>
-      <div className="flex flex-wrap gap-3">
+    <div className="mt-6">
+      <h3 className="text-xl font-bold mb-4 text-black">Available Quantities</h3>
+      <div className="flex flex-wrap gap-4">
         {options.map((option, index) => (
           <div
             key={index}
-            className="bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+            className="bg-white border-2 border-black/10 p-4 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
           >
-            <p className="text-sm text-gray-600">{option.quantity}</p>
-            <p className="font-semibold text-primary">{option.price}</p>
+            <p className="text-lg font-medium text-black group-hover:text-gray-800">{option.quantity}</p>
+            <p className="text-2xl font-bold text-black mt-1">{option.price}</p>
           </div>
         ))}
       </div>
