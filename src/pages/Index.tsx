@@ -1,9 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Truck, Factory, Users, Award, Leaf } from "lucide-react";
+import { ArrowRight, Shield, Truck, Factory, Users, Award, Leaf, Milk, Cloud } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { translations } from "@/utils/translations";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const iconMap = {
   Shield,
@@ -67,7 +68,55 @@ const Index = () => {
   ];
 
   return (
-    <div className="animate-fadeIn">
+    <div className="animate-fadeIn relative">
+      {/* Floating Elements */}
+      <motion.div
+        animate={{
+          y: [0, -20, 0],
+          rotate: [0, 10, -10, 0]
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="fixed top-20 right-10 text-black/10"
+      >
+        <Milk size={64} />
+      </motion.div>
+      
+      <motion.div
+        animate={{
+          y: [0, 20, 0],
+          rotate: [0, -10, 10, 0]
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1
+        }}
+        className="fixed bottom-20 left-10 text-black/10"
+      >
+        <Cloud size={48} />
+      </motion.div>
+
+      <motion.div
+        animate={{
+          y: [0, 15, 0],
+          x: [0, 15, 0]
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="fixed top-40 left-20 text-black/10"
+      >
+        <Leaf size={32} />
+      </motion.div>
+
       {/* Hero Section */}
       <div className="relative bg-primary text-white">
         <div className="absolute inset-0 bg-[url('/dairy-hero.jpg')] opacity-20 bg-cover bg-center" />

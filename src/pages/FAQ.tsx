@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { HelpCircle, MessageCircle, Coffee } from "lucide-react";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const { language } = useLanguage();
@@ -29,7 +31,55 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 animate-fadeIn">
+    <div className="min-h-screen bg-gray-50 animate-fadeIn relative">
+      {/* Floating Elements */}
+      <motion.div
+        animate={{
+          y: [0, -15, 0],
+          scale: [1, 1.1, 1]
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="fixed top-32 right-12 text-black/10"
+      >
+        <HelpCircle size={40} />
+      </motion.div>
+      
+      <motion.div
+        animate={{
+          y: [0, 20, 0],
+          rotate: [0, -10, 10, 0]
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="fixed bottom-24 left-12 text-black/10"
+      >
+        <MessageCircle size={36} />
+      </motion.div>
+
+      <motion.div
+        animate={{
+          y: [0, 15, 0],
+          x: [0, 15, 0]
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1
+        }}
+        className="fixed top-48 left-16 text-black/10"
+      >
+        <Coffee size={32} />
+      </motion.div>
+
       {/* Hero Section */}
       <div className="relative bg-primary/10 py-16">
         <div className="container mx-auto px-4">

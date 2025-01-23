@@ -4,14 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, MessageSquare } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const { language } = useLanguage();
   const t = translations[language].contact;
 
   return (
-    <div className="container mx-auto px-4 py-8 animate-fadeIn">
+    <div className="container mx-auto px-4 py-8 animate-fadeIn relative">
+      {/* Floating Elements */}
+      <motion.div
+        animate={{
+          y: [0, -20, 0],
+          rotate: [0, 10, -10, 0]
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="fixed top-24 right-12 text-black/10"
+      >
+        <MessageSquare size={48} />
+      </motion.div>
+      
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          rotate: [0, -5, 5, 0]
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="fixed bottom-20 left-12 text-black/10"
+      >
+        <Mail size={40} />
+      </motion.div>
+
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
         <p className="text-lg text-muted-foreground">{t.description}</p>
