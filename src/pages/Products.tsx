@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import NutritionFacts from "@/components/NutritionFacts";
 import ProductPricing from "@/components/ProductPricing";
 import { motion } from "framer-motion";
-import { Milk, Droplet, Container } from "lucide-react";
+import { Milk, Package, ShoppingCart } from "lucide-react";
 
 const Products = () => {
   const { language } = useLanguage();
@@ -15,7 +15,7 @@ const Products = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   };
@@ -26,82 +26,39 @@ const Products = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative">
-      {/* Floating Elements */}
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 10, -10, 0]
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="fixed top-24 right-10 text-black/10"
-      >
-        <Container size={48} />
-      </motion.div>
-      
-      <motion.div
-        animate={{
-          y: [0, 20, 0],
-          rotate: [0, -10, 10, 0]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        className="fixed bottom-20 left-10 text-black/10"
-      >
-        <Droplet size={32} />
-      </motion.div>
-
+    <div className="container mx-auto px-4 py-8">
       <motion.div
         initial="hidden"
         animate="show"
         variants={container}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
         {t.items.map((product, index) => (
           <motion.div key={index} variants={item}>
-            <Card className="group hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white border-2 border-black/10">
-              <CardHeader className="space-y-4">
-                <CardTitle className="text-2xl group-hover:text-black transition-colors">
+            <Card className="group hover:shadow-lg transition-all duration-300 h-full">
+              <CardHeader className="p-4 space-y-2">
+                <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
                   {product.name}
                 </CardTitle>
-                <CardDescription className="text-xl font-bold text-black">
+                <CardDescription className="text-base font-semibold text-primary">
                   {product.price}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
-                <div className="aspect-square w-full bg-gray-50 rounded-lg overflow-hidden">
+              <CardContent className="p-4 pt-0 space-y-4">
+                <div className="aspect-square w-full bg-muted rounded-md overflow-hidden">
                   <img
                     src={`/placeholder.svg`}
                     alt={product.name}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <p className="text-gray-600 text-lg">{product.description}</p>
-                
-                <NutritionFacts
-                  facts={{
-                    fat: "6g",
-                    solidsNotFat: "9g",
-                    protein: "3.4g",
-                    carbohydrate: "4.9g",
-                    minerals: "740mg",
-                    energyValue: "90 K.Cal"
-                  }}
-                />
-                
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  {product.description}
+                </p>
                 <ProductPricing
                   options={[
                     { quantity: "500ml", price: "₹25" },
-                    { quantity: "1L", price: "₹48" },
-                    { quantity: "2L", price: "₹92" }
+                    { quantity: "1L", price: "₹48" }
                   ]}
                 />
               </CardContent>
