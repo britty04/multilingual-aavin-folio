@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 260 100% 99%;
+    --foreground: 260 10% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 260 10% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 0 0% 0%;
+    --popover-foreground: 260 10% 10%;
+    --primary: 260 89% 66%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 33%;
-    --accent: 0 0% 13%;
+    --secondary: 260 25% 54%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 40% 96%;
+    --muted-foreground: 260 10% 46%;
+    --accent: 24 94% 53%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 260 89% 66%;
     --radius: 0.75rem;
   }
  
   .dark {
-    --background: 0 0% 0%;
+    --background: 260 30% 10%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 0%;
+    --card: 260 30% 10%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 0%;
+    --popover: 260 30% 10%;
     --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 0%;
+    --primary: 260 89% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 25% 54%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 13%;
-    --muted-foreground: 0 0% 67%;
-    --accent: 0 0% 87%;
-    --accent-foreground: 0 0% 0%;
+    --muted: 260 30% 20%;
+    --muted-foreground: 260 10% 70%;
+    --accent: 24 94% 53%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 13%;
-    --input: 0 0% 13%;
-    --ring: 0 0% 100%;
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 260 89% 66%;
   }
 }
 
@@ -73,5 +73,13 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10;
   }
 }
