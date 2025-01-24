@@ -5,6 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { translations } from "@/utils/translations";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ProcurementSection } from "@/components/home/ProcurementSection";
+import { ProcessingSection } from "@/components/home/ProcessingSection";
+import { DeliverySection } from "@/components/home/DeliverySection";
+import { ImageGallery } from "@/components/home/ImageGallery";
 
 const iconMap = {
   Shield,
@@ -155,6 +159,14 @@ const Index = () => {
           })}
         </div>
       </div>
+
+      {/* New Content Sections */}
+      <ProcurementSection />
+      <ProcessingSection />
+      <DeliverySection />
+      
+      {/* Image Gallery */}
+      <ImageGallery />
 
       {/* Our Products Section */}
       <div className="bg-gray-50 py-16">
