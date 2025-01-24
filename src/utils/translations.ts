@@ -4,8 +4,6 @@ export const translations = {
       home: "Home",
       products: "Products",
       faq: "FAQ",
-      gallery: "Gallery",
-      careers: "Careers",
       contact: "Contact",
       login: "Login",
       signup: "Sign Up"
@@ -112,39 +110,6 @@ export const translations = {
         }
       ]
     },
-    gallery: {
-      title: "Gallery",
-      description: "Take a look at our facilities and products",
-      categories: [
-        "Products",
-        "Facilities",
-        "Events"
-      ]
-    },
-    careers: {
-      title: "Join Our Team",
-      description: "Build your career with Aavin",
-      jobs: [
-        {
-          title: "Production Manager",
-          department: "Manufacturing",
-          location: "Coimbatore",
-          type: "Full-time"
-        },
-        {
-          title: "Quality Control Specialist",
-          department: "Quality Assurance",
-          location: "Coimbatore",
-          type: "Full-time"
-        },
-        {
-          title: "Delivery Executive",
-          department: "Logistics",
-          location: "Coimbatore",
-          type: "Full-time"
-        }
-      ]
-    },
     contact: {
       title: "Contact Us",
       description: "Get in touch with us",
@@ -189,8 +154,6 @@ export const translations = {
       home: "முகப்பு",
       products: "தயாரிப்புகள்",
       faq: "கேள்விகள்",
-      gallery: "படத்தொகுப்பு",
-      careers: "வேலைவாய்ப்புகள்",
       contact: "தொடர்பு",
       login: "உள்நுழைய",
       signup: "பதிவு செய்ய"
@@ -294,39 +257,6 @@ export const translations = {
         {
           question: "என் ஆர்டரை எவ்வாறு கண்காணிக்கலாம்?",
           answer: "உங்கள் ஆர்டர் உறுதியாகிய பிறகு, நீங்கள் SMS மற்றும் மின்னஞ்சல் மூலம் கண்காணிப்பு இணைப்பு பெறுவீர்கள். எங்கள் மொபைல் செயலியில் உங்கள் ஆர்டரை கண்காணிக்கவும் முடியும்."
-        }
-      ]
-    },
-    gallery: {
-      title: "படத்தொகுப்பு",
-      description: "எங்கள் வசதிகள் மற்றும் தயாரிப்புகளைப் பாருங்கள்",
-      categories: [
-        "தயாரிப்புகள்",
-        "வசதிகள்",
-        "நிகழ்வுகள்"
-      ]
-    },
-    careers: {
-      title: "எங்கள் குழுவில் இணையுங்கள்",
-      description: "ஆவினுடன் உங்கள் வாழ்க்கைப் பாதையை உருவாக்குங்கள்",
-      jobs: [
-        {
-          title: "உற்பத்தி மேலாளர்",
-          department: "உற்பத்தி",
-          location: "கோயம்புத்தூர்",
-          type: "முழு நேரம்"
-        },
-        {
-          title: "தர கட்டுப்பாட்டு நிபுணர்",
-          department: "தர உறுதி",
-          location: "கோயம்புத்தூர்",
-          type: "முழு நேரம்"
-        },
-        {
-          title: "விநியோக செயல் அதிகாரி",
-          department: "லாஜிஸ்டிக்ஸ்",
-          location: "கோயம்புத்தூர்",
-          type: "முழு நேரம்"
         }
       ]
     },

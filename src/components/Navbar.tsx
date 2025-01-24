@@ -9,16 +9,12 @@ const navItems = {
     { title: "Home", path: "/" },
     { title: "Products", path: "/products" },
     { title: "FAQ", path: "/faq" },
-    { title: "Gallery", path: "/gallery" },
-    { title: "Careers", path: "/careers" },
     { title: "Contact", path: "/contact" },
   ],
   ta: [
     { title: "முகப்பு", path: "/" },
     { title: "தயாரிப்புகள்", path: "/products" },
     { title: "கேள்விகள்", path: "/faq" },
-    { title: "படத்தொகுப்பு", path: "/gallery" },
-    { title: "வேலைவாய்ப்புகள்", path: "/careers" },
     { title: "தொடர்பு", path: "/contact" },
   ],
 };
